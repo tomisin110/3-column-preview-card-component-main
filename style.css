@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+  
+
+    
+:root{
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+    html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+     margin: 0;
+    padding: 0;
+}
+body{
+    background-color:var(--Very-light-gray-background-headings-buttons) ;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+
+}
+.card{
+    padding: 40px ;
+}
+.card-1{
+    background-color: var(--Bright-orange);
+}
+.card-2{
+    background-color: var(--Dark-cyan);
+
+}
+.card-3{
+    background-color: var(--Very-dark-cyan);
+}
+.card h2{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase; 
+    color: var(--Very-light-gray-background-headings-buttons);  
+    font-size: 30px; 
+}
+.card p{
+    color: var(--Transparent-white-paragraphs);
+    line-height: 1.6;
+
+}
+.card a{
+    text-decoration: none;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    padding: 13px 27px ;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+   border: 2px solid var(--Very-light-gray-background-headings-buttons);
+   transition: all .4s ease-in-out;
+}
+.card-1 a{
+    color: var(--Bright-orange);
+}
+.card-2 a{
+    color: var(--Dark-cyan);
+}
+.card-3 a{
+    color: var(--Very-dark-cyan);
+}
+
+.card a:hover{
+    color: var(--Transparent-white-paragraphs);
+    background: transparent;
+
+}
+@media (max-width:768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:425px){
+    .wrapper{
+        margin: 1rem .5rem;
+    }
+}
